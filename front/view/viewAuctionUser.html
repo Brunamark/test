@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-user-view bg-cover flex flex-col  h-screen ">
+
+  <div class="absolute inset-0 bg-black opacity-30"></div>
+  <div class="relative z-10 text-white">
+
+    <header class="bg-[#818CA7] h-20 ">
+      <div class="  flex justify-between items-center mx-10">
+        <div class="h-20 ">
+          <img src="../assets/img/artismundi-logo-triangle.png" class="h-full w-full" alt="logo ArtisMundi">
+        </div>
+        <nav>
+          <ul class="flex space-x-10 text-2xl ">
+            <li><a href="#" class="hover:text-gray-200">Meus leilões</a></li>
+            <li><a href="#" class="hover:text-gray-200">Perfil</a></li>
+            <li><a href="#" class="hover:text-gray-200">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+
+
+    <div class="flex flex-row items-center justify-center mt-20 space-x-6">
+      <input type="text" id="serach" placeholder="Nome do leilão" class="w-7/12 h-12 bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-smfocus:ring-primary-600 block p-2.5
+      dark:bg-[#F7F7F7] dark:border-gray-500 dark:placeholder-gray-400
+      dark:text-[#676A71] dark:focus:ring-primary-500 dark:focus:border-primary-500">
+      <input type="date" i="dateInput" placeholder="dd/mm/aaaa" class="h-12 bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-smfocus:ring-primary-600 block p-2.5
+      dark:bg-[#F7F7F7] dark:border-gray-500 dark:placeholder-gray-400
+      dark:text-[#676A71] dark:focus:ring-primary-500 dark:focus:border-primary-500">
+      <button id="searchBtn"
+        class="h-12 text-white inline-flex items-center bg-[#818CA7] hover:bg-[#6C7486] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-lg px-5 py-2.5 text-center dark:bg-[#818CA7] dark:hover:bg-[#6C7486] dark:focus:ring-[#6C7486]">
+        Procurar
+        <img src="../assets/img/search_icon.svg" alt="Search icon" class="h-5 w-5 ml-3">
+      </button>
+    </div>
+
+      <div id="cards" class="grid grid-cols-3 p-20">
+
+    
+      <div class=" h-96 flex justify-center">
+
+        <div class="bg-white h-full w-80 p-4"> 
+          <div class="flex flex-col">
+            <p class="text-[#676A71] text-lg font-medium ">Bids for Beauty</p>
+            <p class="text-[#676A71] text-lg font-normal ">15/03/2024</p>
+          </div>
+          <div class="w-72 h-40 overflow-hidden flex items-center justify-center">
+            <img src="../assets/img/catPainting.jpg" alt="cat painting" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-col">
+              <p class="text-[#676A71] text-lg font-normal">Cat Painting</p>
+              <p class="text-[#676A71] text-lg font-normal">By Meow</p>
+            </div>
+            <button id="details-btn" type="button" class="text-[#595959] border border-[#595959] hover:bg-[#676A71] hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center h-10 mt-4 ">Detalhes</button>
+          </div>
+          <p class="text-[#676A71] text-lg font-normal mt-1">R$ 100,00</p>
+          <button id="btn" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+          class="text-white bg-[#818CA7] hover:bg-[#676A71] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-[#818CA7] dark:hover:bg-[#6C7486] dark:focus:ring-[#676A71] h-10 mt-2 w-72"
+          type="button">
+          Lance
+        </button>
+        </div>
+
+        
+      </div>
+
+  
+
+    </div>
+
+
+    <div id="crud-modal" tabindex="-1"
+      class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center w-full h-full  bg-gray-900 bg-opacity-50">
+      <div class="relative p-4 w-full  max-w-xl ">
+        <div class="relative bg-white rounded-sm shadow dark:bg-white w-full">
+
+          <!--
+        <div class="flex">
+          <button type="button"
+            class="text-[#676A71] bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-toggle="crud-modal">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div> -->
+
+
+          <label id="AuctionNameLabel" for="name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-[#676A71]"></label>
+          <form class="p-4 md:p-5">
+            <div class="grid gap-4 mb-4 grid-cols-2">
+              <div id="contentModal" class="col-span-2">
+
+
+
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/viewAuctionUser.js"></script>
+
+</body>
+
+</html>
